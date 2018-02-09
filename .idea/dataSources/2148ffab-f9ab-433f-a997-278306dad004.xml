@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="land@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="information_schema"/>
+    <schema id="3" parent="1" name="itaa17"/>
+    <schema id="4" parent="1" name="land">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="phpmyadmin"/>
+    <schema id="8" parent="1" name="shelter"/>
+    <schema id="9" parent="1" name="test_db"/>
+    <table id="10" parent="4" name="migrations"/>
+    <table id="11" parent="4" name="pages"/>
+    <table id="12" parent="4" name="password_resets"/>
+    <table id="13" parent="4" name="peoples"/>
+    <table id="14" parent="4" name="portfolios"/>
+    <table id="15" parent="4" name="services"/>
+    <table id="16" parent="4" name="users"/>
+    <column id="17" parent="10" name="migration">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="10" name="batch">
+      <Position>2</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="11" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="11" name="alias">
+      <Position>3</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="11" name="text">
+      <Position>4</Position>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="11" name="images">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="11" name="created_at">
+      <Position>6</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <column id="25" parent="11" name="updated_at">
+      <Position>7</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <key id="26" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="12" name="email">
+      <Position>1</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="12" name="token">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="12" name="created_at">
+      <Position>3</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="30" parent="12" name="password_resets_email_index">
+      <ColNames>email</ColNames>
+    </index>
+    <index id="31" parent="12" name="password_resets_token_index">
+      <ColNames>token</ColNames>
+    </index>
+    <column id="32" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="13" name="position">
+      <Position>3</Position>
+      <DataType>VARCHAR(150)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="13" name="images">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="13" name="text">
+      <Position>5</Position>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="13" name="created_at">
+      <Position>6</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <column id="38" parent="13" name="updated_at">
+      <Position>7</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <key id="39" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(200)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="14" name="images">
+      <Position>3</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="14" name="filter">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="14" name="created_at">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <column id="45" parent="14" name="updated_at">
+      <Position>6</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <key id="46" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="15" name="text">
+      <Position>3</Position>
+      <DataType>TEXT(65535)|-1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="15" name="icon">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="15" name="created_at">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <column id="52" parent="15" name="updated_at">
+      <Position>6</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <key id="53" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="55" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="16" name="email">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="16" name="password">
+      <Position>4</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="16" name="remember_token">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="59" parent="16" name="created_at">
+      <Position>6</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <column id="60" parent="16" name="updated_at">
+      <Position>7</Position>
+      <DataType>TIMESTAMP(19)|93</DataType>
+    </column>
+    <index id="61" parent="16" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
